@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Emre Tellioğlu - CV</title>
+<style>
+  :root {
+    --primary: #0f3a5f;
+    --accent: #1f6feb;
+    --text: #1f2933;
+    --muted: #52606d;
+    --line: #d9e2ec;
+    --sidebar-bg: #0f3a5f;
+    --sidebar-text: #e7eef5;
+    --sidebar-muted: #b6c6d6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: #e9edf2;
+    line-height: 1.5;
+    font-size: 13px;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 16px auto;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+    box-shadow: 0 6px 28px rgba(15, 58, 95, 0.18);
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 26px 20px;
+  }
+
+  .sidebar h2 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 22px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+  .sidebar h2:first-of-type { margin-top: 6px; }
+
+  .sidebar p, .sidebar li { color: var(--sidebar-text); font-size: 12px; }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    word-break: break-word;
+  }
+  .contact-item .ico { color: var(--sidebar-muted); flex: 0 0 16px; }
+  .contact-item a { color: var(--sidebar-text); text-decoration: none; }
+
+  .skill-group { margin-bottom: 12px; }
+  .skill-group .label {
+    font-weight: 600;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .sidebar ul { list-style: none; }
+  .sidebar ul li { margin-bottom: 6px; position: relative; padding-left: 12px; }
+  .sidebar ul li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--sidebar-muted);
+  }
+
+  .lang-row { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .lang-row .level { color: var(--sidebar-muted); }
+
+  .ref-item { margin-bottom: 12px; font-size: 11px; }
+  .ref-item .name { font-weight: 600; color: #fff; }
+  .ref-item .role { color: var(--sidebar-muted); font-style: italic; }
+
+  /* ---------- MAIN ---------- */
+  .main { padding: 30px 30px 26px; }
+
+  .name {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+  .role {
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 4px;
+    letter-spacing: 0.3px;
+  }
+
+  .section { margin-top: 22px; }
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+
+  .summary { color: var(--muted); text-align: justify; }
+
+  .entry { margin-bottom: 14px; }
+  .entry .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .entry .title { font-weight: 700; color: var(--text); font-size: 13.5px; }
+  .entry .meta {
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .entry .sub { color: var(--muted); font-size: 12px; font-style: italic; margin-bottom: 4px; }
+  .entry ul { margin: 4px 0 0 16px; }
+  .entry ul li { margin-bottom: 3px; color: var(--text); }
+
+  .badge {
+    display: inline-block;
+    background: #eaf2fb;
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-size: 10.5px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 11.5px; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: auto; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>İletişim</h2>
+      <div class="contact-item"><span class="ico">☎</span><span>0536 479 31 60</span></div>
+      <div class="contact-item"><span class="ico">☎</span><span>0554 421 25 61</span></div>
+      <div class="contact-item"><span class="ico">✉</span><a href="mailto:tellioglux@gmail.com">tellioglux@gmail.com</a></div>
+      <div class="contact-item"><span class="ico">in</span><a href="https://www.linkedin.com/in/emre-tellioğlu-538312259/">linkedin.com/in/emre-tellioğlu</a></div>
+
+      <h2>Teknik Yetenekler</h2>
+      <div class="skill-group">
+        <div class="label">Programlama Dilleri</div>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">C#</span>
+          <span class="chip">Dart</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Framework & Kütüphaneler</div>
+        <div class="chips">
+          <span class="chip">Flutter</span>
+          <span class="chip">Unity</span>
+          <span class="chip">React</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">Pandas</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Veritabanı & Backend</div>
+        <div class="chips">
+          <span class="chip">Firebase</span>
+          <span class="chip">Firestore</span>
+          <span class="chip">Auth</span>
+          <span class="chip">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="label">Çalışma Alanları</div>
+        <div class="chips">
+          <span class="chip">Mobil Geliştirme</span>
+          <span class="chip">Yapay Zekâ / ML</span>
+          <span class="chip">Veri Analizi</span>
+          <span class="chip">Proje Yönetimi</span>
+        </div>
+      </div>
+
+      <h2>Yabancı Diller</h2>
+      <div class="lang-row"><span>İngilizce</span><span class="level">B1 · Orta</span></div>
+
+      <h2>Eğitim</h2>
+      <div class="ref-item">
+        <div class="name">Sivas Cumhuriyet Üniversitesi</div>
+        <div>Bilişim Sistemleri ve Teknolojileri (Lisans)</div>
+        <div class="role">Şarkışla Uygulamalı Bilimler Yüksekokulu</div>
+        <div style="color:var(--sidebar-muted);">Mezuniyet: Haziran 2026</div>
+      </div>
+
+      <h2>Referanslar</h2>
+      <div class="ref-item">
+        <div class="name">Abdulkadir Baygül</div>
+        <div class="role">TEKNOFEST Fuar Koordinatörü / T3 Vakfı Sivas İl Sorumlusu</div>
+        <div>0530 796 00 19 · kadirbygl@gmail.com</div>
+      </div>
+      <div class="ref-item">
+        <div class="name">Prof. Dr. Adem Karakaş</div>
+        <div class="role">Öğretim Görevlisi, ÖSYM İlçe Koordinatörü</div>
+        <div>0507 212 53 80 · ademkarakas@cumhuriyet.edu.tr</div>
+      </div>
+      <div class="ref-item">
+        <div class="name">Doç. Dr. Mesut Polatgil</div>
+        <div class="role">Bölüm Başkanı, Şarkışla UBYO</div>
+        <div>0544 789 08 00 · mesutpolatgil@cumhuriyet.edu.tr</div>
+      </div>
+      <div class="ref-item">
+        <div class="name">Tahir Tellioğlu</div>
+        <div class="role">İMKON İnşaat Müteahhitleri Konf. Başkanı</div>
+        <div>0532 616 01 94</div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="name">Emre Tellioğlu</div>
+      <div class="role">Yazılım Geliştirici · Bilişim Sistemleri ve Teknolojileri Uzmanı</div>
+
+      <section class="section">
+        <div class="section-title">Hakkımda</div>
+        <p class="summary">
+          Mobil uygulama geliştirme ve yapay zekâ tabanlı çözümler üzerine yoğunlaşmış,
+          proje bazlı öğrenmeyi benimsemiş bir bilişim teknolojileri mezunuyum.
+          TEKNOFEST yarışmalarında Türkiye derecelerine sahip; takım liderliği, problem çözme ve
+          analitik düşünme becerilerimi erişilebilirlik, eğitim, siber güvenlik ve tarım
+          teknolojileri gibi toplumsal etki odaklı projelerde somut başarılarla geliştirdim.
+          Fikir aşamasından ürüne kadar tüm geliştirme sürecine aktif katkı sağlayan,
+          öğrenmeye ve takım çalışmasına açık bir geliştiriciyim.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Projeler ve Başarılar</div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Maden Teknolojileri Platformu <span class="badge">Devam Ediyor</span></span>
+            <span class="meta">TEKNOFEST · Geliştirici</span>
+          </div>
+          <div class="sub">Maden Teknolojileri Yarışması — Online Sunum Aşaması</div>
+          <ul>
+            <li>Yarışmanın online sunum aşamasında yer alıyor; projenin teknik tasarım ve geliştirme süreçlerini yürütüyorum.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Engelsiz Yarınlar Platformu (Yades)</span>
+            <span class="meta">TEKNOFEST 2025 · Finalist</span>
+          </div>
+          <div class="sub">Engelsiz Yaşam Teknolojileri — Takım Kaptanı</div>
+          <ul>
+            <li>Proje yol haritasını oluşturdum, görev dağılımını yaptım ve takımı TEKNOFEST süreçlerinde temsil ettim.</li>
+            <li>Firebase ve yapay zekâ tabanlı bir eşleştirme algoritması tasarlayarak kullanıcı profillerine göre en uygun bakıcı-birey eşleşmesini otomatikleştirdim.</li>
+            <li>Projeyle TEKNOFEST tarihinde ilk kez düzenlenen Şampiyonlar Ligi'nde yarışma başarısı gösterdim.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Yapay Zekâ Tabanlı Tarımsal Verimlilik Platformu</span>
+            <span class="meta">TEKNOFEST 2025 · Finalist</span>
+          </div>
+          <div class="sub">KKTC Tarım Teknolojileri — Takım Kaptanı</div>
+          <ul>
+            <li>Takım içi koordinasyonu sağladım ve proje takvimini yönettim.</li>
+            <li>Python, Scikit-learn ve Pandas kullanarak veri ön işleme, model eğitimi ve tahminleme süreçlerini tamamladım.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Yapay Zekâ Destekli Mobil URL Güvenlik Uygulaması</span>
+            <span class="meta">TEKNOFEST 2024 · Türkiye 3.'sü</span>
+          </div>
+          <div class="sub">TÜBİTAK Proje Yarışması — Geliştirici</div>
+          <ul>
+            <li>Flutter ile kullanıcı arayüzünü, Python ile sunucu tarafını geliştirdim ve makine öğrenmesi modelini eğittim.</li>
+            <li>OCR ile metne çevrilen URL'leri Random Forest modeliyle analiz ederek %98 doğruluk oranına ulaştım.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">İngilizce Kelimelerimi Öğreniyorum</span>
+            <span class="meta">TEKNOFEST 2023 · Türkiye 2.'si</span>
+          </div>
+          <div class="sub">TÜBİTAK Proje Yarışması — Takım Kaptanı</div>
+          <ul>
+            <li>Bilimsel "Aralıklı Tekrar" tekniğini temel alan mobil oyunun konsept tasarımını ve proje yönetimini yürüttüm.</li>
+            <li>Unity ve C# ile kullanıcının öğrenme hızına adapte olan dinamik bir algoritma geliştirerek kalıcı öğrenme deneyimi sundum.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Rhisos Roket Takımı</span>
+            <span class="meta">2022</span>
+          </div>
+          <div class="sub">Tasarım ve Yazılım Ekibi Üyesi</div>
+          <ul>
+            <li>Roketin aviyonik sistemleri için yazılım geliştirme ve donanım entegrasyon süreçlerine katkı sağladım.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Liderlik ve Sosyal Roller</div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Fuar Operasyon ve Koordinasyon Sorumlusu</span>
+            <span class="meta">TEKNOFEST İstanbul · 2025</span>
+          </div>
+          <ul>
+            <li>TEKNOFEST tarihinin en büyük festivalinde Fuar Koordinatörlüğü'ne bağlı olarak etkinlik akışının takibi ve saha problemlerinin çözümü gibi kritik görevleri yürüttüm.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Başkan — Şarkışla Bilim, Sanat ve Kültür Kulübü</span>
+            <span class="meta">2023 – Devam Ediyor</span>
+          </div>
+          <ul>
+            <li>Teknoloji odaklı seminerler, atölye çalışmaları ve sosyal etkinlikler düzenleyerek öğrenci katılımını artırdım.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Öğrenci Temsilcisi — Yüksekokul Yönetim Kurulu</span>
+            <span class="meta"></span>
+          </div>
+          <ul>
+            <li>Öğrencilerin akademik ve idari konulardaki görüşlerini yönetim kuruluna ileterek öğrenci-yönetim iletişimini güçlendirdim.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="head">
+            <span class="title">Üye — Sivas Cumhuriyet Üniversitesi Öğrenci Senatosu</span>
+            <span class="meta"></span>
+          </div>
+          <ul>
+            <li>Üniversite genelinde öğrenci hakları ve yönetmeliklerle ilgili karar alma süreçlerine katkıda bulundum.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
