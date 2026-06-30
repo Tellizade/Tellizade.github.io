@@ -33,6 +33,7 @@ const translations = {
   nav_path: "Experience",
   nav_contact: "Contact",
 
+  hero_status: "Open to opportunities",
   hero_eyebrow: "Sivas, Türkiye — Software Developer",
   hero_headline: "I turn ideas into products that actually work.",
   hero_intro:
@@ -64,7 +65,7 @@ const translations = {
   skills_tools: "Tools & Practices",
   skills_soft: "Qualities",
   skills_soft_list:
-    "Team leadership · Project management · Problem solving · Analytical thinking · Presentation & communication · Fast learning · Solution-oriented",
+    "Teamwork · Team leadership · Project management · Problem solving · Analytical thinking · Presentation & communication · Fast learning · Adaptability · Responsibility · Solution-oriented",
 
   work_title: "Selected Work",
   award_3rd: "3rd in Türkiye",
@@ -144,6 +145,39 @@ function applyLang(next) {
 
 langToggle.addEventListener("click", () => applyLang(lang === "en" ? "tr" : "en"));
 if (lang === "en") applyLang("en");
+
+// Kaydırma ilerleme çubuğu
+const progress = document.getElementById("progress");
+function updateProgress() {
+  const h = document.documentElement;
+  const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+  progress.style.transform = `scaleX(${scrolled || 0})`;
+}
+window.addEventListener("scroll", updateProgress, { passive: true });
+updateProgress();
+
+// Aktif menü vurgusu
+const sections = ["about", "skills", "work", "path", "contact"]
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
+const navMap = {};
+document.querySelectorAll(".nav__links a").forEach((a) => {
+  navMap[a.getAttribute("href").slice(1)] = a;
+});
+const navIO = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      const link = navMap[e.target.id];
+      if (!link) return;
+      if (e.isIntersecting) {
+        Object.values(navMap).forEach((l) => l.classList.remove("active"));
+        link.classList.add("active");
+      }
+    });
+  },
+  { rootMargin: "-45% 0px -50% 0px" }
+);
+sections.forEach((s) => navIO.observe(s));
 
 // Kaydırmada beliren animasyon
 const items = document.querySelectorAll(".block, .work__item, .mini, .path__item");
