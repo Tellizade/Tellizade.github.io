@@ -32,7 +32,7 @@ mutlaka ekle. Aksi halde 3-5 yıl deneyim isteyen ilanlar çıkar.
 
 - ✅ CV (PDF) — `CV-TR.md` / `CV-EN.md`'den üret
 - ✅ Ön yazı — `on-yazilar.md`'den pozisyona uygun olanı seç
-- ✅ Portfolyo linki — `https://tellizade.github.io/Works/`
+- ✅ Portfolyo linki — `https://tellizade.github.io/`
 - ✅ GitHub linki — `https://github.com/Tellizade`
 - ✅ LinkedIn linki
 

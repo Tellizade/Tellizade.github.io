@@ -6,7 +6,7 @@ Bu depo, kişisel portfolyo web sitemi ve iş başvurularında kullandığım ka
 
 `index.html` + `assets/` → modern, çift dilli (TR/EN), responsive kişisel portfolyo.
 
-- **Canlı (GitHub Pages):** https://tellizade.github.io/Works/
+- **Canlı (GitHub Pages):** https://tellizade.github.io/
 - **Yerel önizleme:** `python3 -m http.server 8000` → http://localhost:8000
 
 ## 📁 Kariyer Kiti

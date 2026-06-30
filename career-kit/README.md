@@ -20,15 +20,14 @@ karşılaman için hazırlandı. Her dosya tek başına kullanıma hazırdır.
 
 Kök dizindeki `index.html`, `assets/` ile birlikte hazır bir web sitesidir. Yayınlamak için:
 
-1. Bu değişiklikler `main` dalına birleştikten (merge) sonra GitHub'da depona git: **`Tellizade/Works`**
+1. GitHub'da depona git: **`Tellizade/Tellizade.github.io`**
 2. Üstten **Settings → Pages** sekmesine gir.
 3. **Source** kısmında **Deploy from a branch** seç.
 4. **Branch**: `main`, **Folder**: `/ (root)` seç ve **Save** de.
-5. Birkaç dakika sonra siten şu adreste yayında olur:
-   **`https://tellizade.github.io/Works/`**
+5. Birkaç dakika sonra siten şu temiz adreste yayında olur:
+   **`https://tellizade.github.io/`**
 
-> İpucu: Daha temiz bir adres istersen (örneğin `tellizade.github.io`), depo adını `Tellizade.github.io`
-> yapabilir veya ileride kendi alan adını (ör. `emretellioglu.com`) bağlayabilirsin.
+> İpucu: İleride kendi alan adını (ör. `emretellioglu.com`) de bu repoya bağlayabilirsin.
 
 Siteyi bilgisayarında önizlemek için bu klasörün **kök dizininde**:
 
@@ -86,7 +85,7 @@ Her başvuruda: **CV + uygun ön yazı (`on-yazilar.md`) + portfolyo linki + Git
 ## Hızlı bağlantılar (her yere yapıştırabilirsin)
 
 ```
-Portfolyo : https://tellizade.github.io/Works/
+Portfolyo : https://tellizade.github.io/
 GitHub    : https://github.com/Tellizade
 LinkedIn  : https://www.linkedin.com/in/emre-tellio%C4%9Flu-538312259/
 E-posta   : tellioglux@gmail.com
