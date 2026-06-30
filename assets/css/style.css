@@ -11,7 +11,7 @@
   --ink-soft: #5a564c;
   --line: #d9d1c0;
   --accent: #b04727;
-  --accent-ink: #8f3a20;
+  --accent-ink: color-mix(in srgb, var(--accent), #000 18%);
   --max: 1120px;
   --gut: clamp(1.4rem, 5vw, 4rem);
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -28,7 +28,7 @@
   --line: #34302455;
   --line: #353026;
   --accent: #e08a5b;
-  --accent-ink: #ed9a6c;
+  --accent-ink: color-mix(in srgb, var(--accent), #fff 14%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -102,6 +102,24 @@ a { color: inherit; text-decoration: none; }
 [data-theme="dark"] .icon-sun { display: block; }
 
 .menu-toggle { display: none; }
+
+/* Renk seçici */
+.accent-pick { position: relative; }
+.accent-menu {
+  position: absolute; top: calc(100% + 8px); right: 0;
+  display: flex; gap: .5rem; padding: .6rem;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: 0 14px 34px -18px rgba(0,0,0,.5);
+  opacity: 0; pointer-events: none; transform: translateY(-6px);
+  transition: opacity .18s, transform .18s; z-index: 60;
+}
+.accent-menu.open { opacity: 1; pointer-events: auto; transform: none; }
+.swatch {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--surface); outline: 1px solid var(--line);
+  cursor: pointer; transition: transform .15s;
+}
+.swatch:hover { transform: scale(1.15); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -188,6 +206,8 @@ a { color: inherit; text-decoration: none; }
 .btn--solid:hover { transform: translateY(-2px); background: var(--accent-ink); }
 .btn--line { border: 1px solid var(--line); color: var(--ink); }
 .btn--line:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.btn--ghost-link { color: var(--ink-soft); padding-left: .6rem; padding-right: .6rem; }
+.btn--ghost-link:hover { color: var(--accent); transform: translateY(-2px); }
 
 .facts {
   grid-column: 1 / -1;
@@ -274,11 +294,14 @@ a { color: inherit; text-decoration: none; }
 }
 .work__award--alt { color: var(--ink-soft); border-color: var(--line); }
 .work__award--muted { color: var(--ink-soft); border-color: var(--line); opacity: .8; }
+.work__award--live { color: var(--paper); background: var(--accent); border-color: var(--accent); }
 .work__year { font-family: var(--mono); color: var(--ink-soft); font-size: .85rem; }
 .work__title { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; line-height: 1.2; }
 .work__role { color: var(--accent); font-size: .9rem; font-weight: 500; margin: .35rem 0 .7rem; }
 .work__desc { color: var(--ink-soft); max-width: 64ch; }
 .work__stack { font-family: var(--mono); font-size: .82rem; color: var(--ink-soft); margin-top: .8rem; }
+.work__link { display: inline-block; margin-top: .7rem; font-weight: 600; font-size: .9rem; color: var(--accent); border-bottom: 1px solid transparent; transition: border-color .2s; }
+.work__link:hover { border-color: var(--accent); }
 
 /* Akademik & ders projeleri */
 .more { margin-top: 3rem; padding-top: 2.4rem; border-top: 1px solid var(--line); }
