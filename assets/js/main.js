@@ -25,26 +25,6 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
-// Vurgu rengi seçici
-const accentToggle = document.getElementById("accentToggle");
-const accentMenu = document.getElementById("accentMenu");
-const savedAccent = localStorage.getItem("accent");
-if (savedAccent) document.documentElement.style.setProperty("--accent", savedAccent);
-
-accentToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  accentMenu.classList.toggle("open");
-});
-document.addEventListener("click", () => accentMenu.classList.remove("open"));
-accentMenu.querySelectorAll(".swatch").forEach((sw) => {
-  sw.addEventListener("click", () => {
-    const color = sw.getAttribute("data-accent");
-    document.documentElement.style.setProperty("--accent", color);
-    localStorage.setItem("accent", color);
-    accentMenu.classList.remove("open");
-  });
-});
-
 // İngilizce çeviriler
 const translations = {
   nav_about: "About",
@@ -95,7 +75,7 @@ const translations = {
   w0_link: "congremy.com →",
   wm_title: "AI & Spectral Analysis Powered Hybrid Mineral Exploration App",
   wm_desc:
-    "An exploration technology aiming to optimise the costly, environmentally harmful blind-drilling process — often described as 'finding a needle in a haystack' — with AI. We use the biogeochemical stress signals that underground mineral richness creates in vegetation (invisible to the naked eye) as 'natural sensors'. From satellite and UAV multispectral data we extract features with NDVI, EVI and SAVI indices and reached ~84.8% average accuracy on pilot regions with a Random Forest model, with an active-learning loop that retrains itself on every new drilling result to keep reducing error. As team captain I worked on data source selection, stress-index analysis and managing the process. The project is still ongoing in the TEKNOFEST 2026 Mining Technologies competition; we are currently at the live presentation stage.",
+    "An exploration technology aiming to optimise the costly, environmentally harmful blind-drilling process in mining with AI. We use the biogeochemical stress signals that underground minerals create in vegetation as 'natural sensors'. From satellite and UAV multispectral data we extract features with NDVI, EVI and SAVI indices and reached ~84.8% average accuracy on pilot regions with a Random Forest model. As team captain I worked on data analysis and process management; the project is currently at the live presentation stage.",
   role_capm: "Team Captain",
   award_3rd: "3rd in Türkiye",
   award_2nd: "2nd in Türkiye",
@@ -141,7 +121,9 @@ const translations = {
   p2_title: "President — Şarkışla Science, Art & Culture Club",
   p2_desc: "Increased student participation by organising technology seminars, workshops and social events.",
   p3_title: "Student Representative & Quality Control Member",
-  p3_desc: "Represented my school at Student Senate meetings and conveyed student views to the administration; also took part in the department's quality control processes.",
+  p3_desc: "Strengthened communication by conveying students' academic and administrative views to the administration; also took part in the department's quality control processes.",
+  p4_title: "Member — Sivas Cumhuriyet University Student Senate",
+  p4_desc: "Represented my school at the university-wide Student Senate meetings and contributed to decision-making on student rights and regulations.",
 
   contact_title: "Contact",
   contact_lead:
