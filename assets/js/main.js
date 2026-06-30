@@ -25,6 +25,26 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+// Vurgu rengi seçici
+const accentToggle = document.getElementById("accentToggle");
+const accentMenu = document.getElementById("accentMenu");
+const savedAccent = localStorage.getItem("accent");
+if (savedAccent) document.documentElement.style.setProperty("--accent", savedAccent);
+
+accentToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  accentMenu.classList.toggle("open");
+});
+document.addEventListener("click", () => accentMenu.classList.remove("open"));
+accentMenu.querySelectorAll(".swatch").forEach((sw) => {
+  sw.addEventListener("click", () => {
+    const color = sw.getAttribute("data-accent");
+    document.documentElement.style.setProperty("--accent", color);
+    localStorage.setItem("accent", color);
+    accentMenu.classList.remove("open");
+  });
+});
+
 // İngilizce çeviriler
 const translations = {
   nav_about: "About",
@@ -34,16 +54,13 @@ const translations = {
   nav_contact: "Contact",
 
   hero_status: "Open to opportunities",
-  hero_eyebrow: "Sivas, Türkiye — Software Developer",
+  hero_eyebrow: "Software Developer",
   hero_headline: "I turn ideas into products that actually work.",
   hero_intro:
     "Hi, I'm Emre Tellioğlu — an Information Systems & Technologies graduate. I build projects end to end, from mobile apps to AI models. What matters to me is not the technology itself, but the real problem it solves.",
   hero_cta_work: "View my work",
+  hero_cta_cv: "Download CV",
   hero_cta_contact: "Get in touch",
-  fact_awards: "TEKNOFEST national awards",
-  fact_acc: "ML model accuracy",
-  fact_captain: "times team captain",
-  fact_projects: "completed projects",
 
   about_title: "About",
   about_p1:
@@ -52,7 +69,8 @@ const translations = {
     "The leadership, problem-solving and analytical thinking reinforced by my national rankings at TEKNOFEST turned into concrete solutions across accessibility, education, cybersecurity and agriculture technologies. I'm a developer who learns new technologies quickly, works well in teams, and finishes work with care.",
   about_edu: "Education",
   about_edu_dept: "Information Systems & Technologies (BSc)",
-  about_edu_grad: "Expected graduation",
+  about_edu_grad: "Graduated",
+  about_gpa: "GPA",
   about_lang: "Languages",
   lang_tr: "Turkish",
   lang_tr_lvl: "Native",
@@ -65,9 +83,20 @@ const translations = {
   skills_tools: "Tools & Practices",
   skills_soft: "Qualities",
   skills_soft_list:
-    "Teamwork · Team leadership · Project management · Problem solving · Analytical thinking · Presentation & communication · Fast learning · Adaptability · Responsibility · Solution-oriented",
+    "Teamwork · Team leadership · Project management · Problem solving · Analytical thinking · Presentation & communication · Fast learning · Adaptability · Time management · Responsibility · Solution-oriented",
 
   work_title: "Selected Work",
+  award_live: "Live",
+  award_presenting: "Live Presentation",
+  w0_sub: "Congress & Paper Management Platform",
+  w0_role: "Product Development · Web Platform",
+  w0_desc:
+    "A live web platform that brings academic congress and paper workflows together in one place. Includes author, reviewer and participant panels; double-blind review, a revision loop, a payment step and automatic digital attendance certificates.",
+  w0_link: "congremy.com →",
+  wm_title: "AI & Spectral Analysis Powered Hybrid Mineral Exploration App",
+  wm_desc:
+    "A hybrid exploration technology that detects underground mineral anomalies using biogeochemical stress signals in vegetation as 'natural sensors'. From satellite/UAV multispectral data we extract features with NDVI, EVI and SAVI indices and reached ~84.8% average accuracy on pilot regions with a Random Forest model, plus an active-learning loop that retrains itself with each new drilling result.",
+  role_capm: "Team Captain",
   award_3rd: "3rd in Türkiye",
   award_2nd: "2nd in Türkiye",
   award_finalist: "Finalist",
@@ -106,15 +135,13 @@ const translations = {
   more3_title: "Machine Learning Studies",
   more3_desc: "Data analysis and model experiments with Python, Scikit-learn and Pandas.",
 
-  path_title: "Experience & Roles",
+  path_title: "Responsibilities & Roles",
   p1_title: "Fair Operations & Coordination Officer",
   p1_desc: "Tracked the event flow and resolved on-site problems at the largest event in the festival's history.",
   p2_title: "President — Şarkışla Science, Art & Culture Club",
   p2_desc: "Increased student participation by organising technology seminars, workshops and social events.",
-  p3_title: "Student Representative — School Board",
-  p3_desc: "Strengthened communication by conveying students' academic and administrative views to the board.",
-  p4_title: "Member — Sivas Cumhuriyet University Student Senate",
-  p4_desc: "Contributed to decision-making processes on student rights and regulations.",
+  p3_title: "Student Representative & Quality Control Member",
+  p3_desc: "Represented my school at Student Senate meetings and conveyed student views to the administration; also took part in the department's quality control processes.",
 
   contact_title: "Contact",
   contact_lead:
