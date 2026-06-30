@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emre Tellioğlu · Yazılım Geliştirici & Yapay Zekâ</title>
+  <meta name="description" content="Emre Tellioğlu — Bilişim Sistemleri ve Teknolojileri mezunu. Mobil ve web geliştirme, yapay zekâ ve makine öğrenmesi. TEKNOFEST Türkiye dereceleri." />
+  <meta name="author" content="Emre Tellioğlu" />
+
+  <!-- Open Graph / sosyal medya paylaşımı -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Emre Tellioğlu · Yazılım Geliştirici & Yapay Zekâ" />
+  <meta property="og:description" content="Mobil ve web geliştirme, yapay zekâ ve makine öğrenmesi. TEKNOFEST Türkiye dereceleri." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+</head>
+<body>
+  <!-- Arka plan ışıması -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Navigasyon -->
+  <header class="nav">
+    <a href="#hero" class="nav__logo">ET<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-i18n="nav_about">Hakkımda</a>
+      <a href="#skills" data-i18n="nav_skills">Yetenekler</a>
+      <a href="#projects" data-i18n="nav_projects">Projeler</a>
+      <a href="#achievements" data-i18n="nav_achievements">Başarılar</a>
+      <a href="#contact" data-i18n="nav_contact">İletişim</a>
+    </nav>
+    <div class="nav__actions">
+      <button id="langToggle" class="lang-toggle" aria-label="Dil değiştir">EN</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Tema değiştir">🌙</button>
+      <button id="menuToggle" class="menu-toggle" aria-label="Menü">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero__content">
+        <p class="hero__greeting" data-i18n="hero_greeting">Merhaba, ben</p>
+        <h1 class="hero__name">Emre Tellioğlu</h1>
+        <h2 class="hero__role">
+          <span data-i18n="hero_role_prefix">Yazılım Geliştirici</span>
+          <span class="hero__role-accent" data-i18n="hero_role_accent">· Yapay Zekâ &amp; Mobil</span>
+        </h2>
+        <p class="hero__tagline" data-i18n="hero_tagline">
+          Bir fikri gece geç saatte not defterine karalayıp, aylar sonra gerçekten çalışan bir
+          ürüne dönüştürmenin ne demek olduğunu biliyorum. Önemli olan teknolojinin kendisi değil,
+          çözdüğü gerçek problemdir.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero_cta_projects">Projelerimi Gör</a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero_cta_contact">İletişime Geç</a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/Tellizade" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/emre-tellio%C4%9Flu-538312259/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:tellioglux@gmail.com">E-posta</a>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num">2</span>
+          <span class="stat__label" data-i18n="stat_finals">TEKNOFEST Türkiye Derecesi</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">5+</span>
+          <span class="stat__label" data-i18n="stat_projects">Tamamlanan Proje</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">%98</span>
+          <span class="stat__label" data-i18n="stat_accuracy">ML Model Doğruluğu</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">4×</span>
+          <span class="stat__label" data-i18n="stat_captain">Takım Kaptanlığı</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hakkımda -->
+    <section id="about" class="section">
+      <h2 class="section__title"><span class="section__index">01.</span> <span data-i18n="about_title">Hakkımda</span></h2>
+      <div class="about">
+        <div class="about__text">
+          <p data-i18n="about_p1">
+            Yazılım geliştirme süreçlerinin uçtan uca her aşamasında deneyim kazanmış, proje bazlı
+            öğrenmeyi benimsemiş bir Bilişim Sistemleri ve Teknolojileri mezunuyum. Mobil ve web
+            uygulama geliştirme, yapay zekâ ve makine öğrenmesi, veri analizi ile veritabanı yönetimi
+            gibi farklı alanlarda projeler yürüttüm.
+          </p>
+          <p data-i18n="about_p2">
+            Fikir aşamasından ürünün hayata geçmesine kadar tasarım, geliştirme, test ve sunum
+            adımlarında aktif rol aldım. TEKNOFEST yarışmalarında elde ettiğim Türkiye dereceleriyle
+            pekişen takım liderliği, problem çözme ve analitik düşünme becerilerimi; erişilebilirlik,
+            eğitim, siber güvenlik ve tarım teknolojileri gibi farklı sektörlere yönelik çözümlerde
+            somut başarılara dönüştürdüm.
+          </p>
+          <p data-i18n="about_p3">
+            Yeni teknolojileri hızla öğrenmeye açık, takım çalışmasına yatkın ve işi titizlikle
+            tamamlayan bir geliştiriciyim.
+          </p>
+        </div>
+        <aside class="about__card">
+          <h3 data-i18n="about_card_edu">Eğitim</h3>
+          <p class="about__edu-school">Sivas Cumhuriyet Üniversitesi</p>
+          <p class="about__edu-dept" data-i18n="about_edu_dept">Bilişim Sistemleri ve Teknolojileri (Lisans)</p>
+          <p class="about__edu-meta">Şarkışla Uygulamalı Bilimler Yüksekokulu</p>
+          <p class="about__edu-grad"><span data-i18n="about_edu_grad">Beklenen Mezuniyet</span>: 2026</p>
+          <hr />
+          <h3 data-i18n="about_card_lang">Diller</h3>
+          <p>🇹🇷 <span data-i18n="lang_tr">Türkçe — Anadil</span></p>
+          <p>🇬🇧 <span data-i18n="lang_en">İngilizce — B1 (Orta Seviye)</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Yetenekler -->
+    <section id="skills" class="section">
+      <h2 class="section__title"><span class="section__index">02.</span> <span data-i18n="skills_title">Teknik Yetenekler</span></h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h3 data-i18n="skills_lang">Programlama Dilleri</h3>
+          <ul class="chips">
+            <li>Python</li><li>C#</li><li>Dart</li><li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills_fw">Framework &amp; Kütüphaneler</h3>
+          <ul class="chips">
+            <li>Flutter</li><li>Unity</li><li>React</li><li>Scikit-learn</li><li>Pandas</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills_db">Veritabanı &amp; Backend</h3>
+          <ul class="chips">
+            <li>Firebase</li><li>Firestore</li><li>Auth</li><li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills_focus">Çalışma Alanları</h3>
+          <ul class="chips">
+            <li data-i18n="focus_mobile">Mobil Geliştirme</li>
+            <li data-i18n="focus_ai">Yapay Zekâ / ML</li>
+            <li data-i18n="focus_data">Veri Analizi</li>
+            <li data-i18n="focus_web">Web Geliştirme</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projeler -->
+    <section id="projects" class="section">
+      <h2 class="section__title"><span class="section__index">03.</span> <span data-i18n="projects_title">Projeler &amp; Başarılar</span></h2>
+      <div class="projects">
+
+        <article class="project">
+          <div class="project__head">
+            <span class="project__tag project__tag--gold" data-i18n="badge_third">Türkiye 3.'lüğü</span>
+            <span class="project__year">2024</span>
+          </div>
+          <h3 class="project__title" data-i18n="proj1_title">Yapay Zekâ Destekli Mobil URL Güvenlik Uygulaması</h3>
+          <p class="project__sub">TEKNOFEST 2024 TÜBİTAK · <span data-i18n="role_dev">Geliştirici</span></p>
+          <p class="project__desc" data-i18n="proj1_desc">
+            Flutter ile kullanıcı arayüzü, Python tabanlı sunucu ve makine öğrenmesi modeli geliştirdik.
+            OCR ile metne çevrilen URL'leri eğittiğimiz Random Forest modeliyle analiz ederek %98
+            doğruluk oranına ulaştık.
+          </p>
+          <ul class="project__stack">
+            <li>Flutter</li><li>Python</li><li>OCR</li><li>Random Forest</li><li>Scikit-learn</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <span class="project__tag project__tag--silver" data-i18n="badge_second">Türkiye 2.'liği</span>
+            <span class="project__year">2023</span>
+          </div>
+          <h3 class="project__title" data-i18n="proj2_title">İngilizce Kelimelerimi Öğreniyorum</h3>
+          <p class="project__sub">TEKNOFEST 2023 TÜBİTAK · <span data-i18n="role_captain">Takım Kaptanı</span></p>
+          <p class="project__desc" data-i18n="proj2_desc">
+            Bilimsel "Aralıklı Tekrar" tekniğini temel alan bir mobil oyun tasarladık. Unity ve C#
+            kullanarak kullanıcının öğrenme hızına adapte olan dinamik bir algoritma geliştirerek
+            kalıcı öğrenme deneyimi sunduk.
+          </p>
+          <ul class="project__stack">
+            <li>Unity</li><li>C#</li><li>Gamification</li><li>Spaced Repetition</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <span class="project__tag project__tag--finalist" data-i18n="badge_finalist">Finalist</span>
+            <span class="project__year">2025</span>
+          </div>
+          <h3 class="project__title" data-i18n="proj3_title">Engelsiz Yarınlar Platformu (Yades)</h3>
+          <p class="project__sub">TEKNOFEST 2025 Engelsiz Yaşam · <span data-i18n="role_captain2">Takım Kaptanı</span></p>
+          <p class="project__desc" data-i18n="proj3_desc">
+            Proje yol haritası ve görev dağılımını yöneterek takımı TEKNOFEST süreçlerinde temsil ettim.
+            Firebase ve yapay zekâ tabanlı bir eşleştirme algoritması tasarlayarak kullanıcı profillerine
+            göre en uygun bakıcı–birey eşleşmesini otomatikleştirdik.
+          </p>
+          <ul class="project__stack">
+            <li>Firebase</li><li>Yapay Zekâ</li><li>Eşleştirme Algoritması</li><li>Mobil</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <span class="project__tag project__tag--finalist" data-i18n="badge_finalist2">Finalist</span>
+            <span class="project__year">2025</span>
+          </div>
+          <h3 class="project__title" data-i18n="proj4_title">Yapay Zekâ Tabanlı Tarımsal Verimlilik Platformu</h3>
+          <p class="project__sub">TEKNOFEST 2025 KKTC Tarım · <span data-i18n="role_captain3">Takım Kaptanı</span></p>
+          <p class="project__desc" data-i18n="proj4_desc">
+            Takım içi koordinasyon ve proje takvimini yönettim. Python, Scikit-learn ve Pandas
+            kullanarak veri ön işleme, model eğitimi ve tahminleme süreçlerini tamamladık.
+          </p>
+          <ul class="project__stack">
+            <li>Python</li><li>Scikit-learn</li><li>Pandas</li><li>Veri Analizi</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project__head">
+            <span class="project__tag" data-i18n="badge_team">Takım Üyesi</span>
+            <span class="project__year">2022</span>
+          </div>
+          <h3 class="project__title" data-i18n="proj5_title">Rhisos Roket Takımı</h3>
+          <p class="project__sub" data-i18n="proj5_sub">Tasarım ve Yazılım Ekibi Üyesi</p>
+          <p class="project__desc" data-i18n="proj5_desc">
+            Roketin aviyonik sistemleri için yazılım geliştirme ve donanım entegrasyon süreçlerine
+            takım olarak katkı sağladım.
+          </p>
+          <ul class="project__stack">
+            <li>Aviyonik</li><li>Yazılım</li><li>Donanım Entegrasyonu</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Başarılar / Liderlik -->
+    <section id="achievements" class="section">
+      <h2 class="section__title"><span class="section__index">04.</span> <span data-i18n="ach_title">Liderlik &amp; Sosyal Roller</span></h2>
+      <ul class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__year">2025</span>
+          <div>
+            <h3 data-i18n="ach1_title">Fuar Operasyon ve Koordinasyon Sorumlusu</h3>
+            <p data-i18n="ach1_desc">TEKNOFEST İstanbul — Festival tarihinin en büyük etkinliğinde etkinlik akışının takibi ve saha problemlerinin çözümü.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">2023–25</span>
+          <div>
+            <h3 data-i18n="ach2_title">Başkan, Şarkışla Bilim Sanat ve Kültür Kulübü</h3>
+            <p data-i18n="ach2_desc">Teknoloji odaklı seminerler, atölye çalışmaları ve sosyal etkinlikler düzenleyerek öğrenci katılımını artırdım.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">—</span>
+          <div>
+            <h3 data-i18n="ach3_title">Öğrenci Temsilcisi, Yüksekokul Yönetim Kurulu</h3>
+            <p data-i18n="ach3_desc">Öğrencilerin akademik ve idari konulardaki görüşlerini yönetim kuruluna ileterek iletişimi güçlendirdim.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__year">—</span>
+          <div>
+            <h3 data-i18n="ach4_title">Üye, Sivas Cumhuriyet Üniversitesi Öğrenci Senatosu</h3>
+            <p data-i18n="ach4_desc">Üniversite genelindeki öğrenci hakları ve yönetmelikleriyle ilgili karar alma süreçlerine katkıda bulundum.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- İletişim -->
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title"><span class="section__index">05.</span> <span data-i18n="contact_title">İletişim</span></h2>
+      <p class="contact__lead" data-i18n="contact_lead">
+        Yeni fırsatlara ve iş birliklerine açığım. Bir projeniz ya da pozisyonunuz için
+        benimle iletişime geçmekten çekinmeyin.
+      </p>
+      <div class="contact__grid">
+        <a class="contact__card" href="mailto:tellioglux@gmail.com">
+          <span class="contact__icon">✉️</span>
+          <span class="contact__label">E-posta</span>
+          <span class="contact__value">tellioglux@gmail.com</span>
+        </a>
+        <a class="contact__card" href="tel:+905364793160">
+          <span class="contact__icon">📞</span>
+          <span class="contact__label">Telefon</span>
+          <span class="contact__value">0536 479 3160</span>
+        </a>
+        <a class="contact__card" href="https://www.linkedin.com/in/emre-tellio%C4%9Flu-538312259/" target="_blank" rel="noopener">
+          <span class="contact__icon">in</span>
+          <span class="contact__label">LinkedIn</span>
+          <span class="contact__value">emre-tellioğlu</span>
+        </a>
+        <a class="contact__card" href="https://github.com/Tellizade" target="_blank" rel="noopener">
+          <span class="contact__icon">🐙</span>
+          <span class="contact__label">GitHub</span>
+          <span class="contact__value">Tellizade</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Emre Tellioğlu · <span data-i18n="footer_built">Bu site Emre Tellioğlu tarafından tasarlanıp kodlanmıştır.</span></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
