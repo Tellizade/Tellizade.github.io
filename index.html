@@ -18,6 +18,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23b04727'/><text x='50' y='71' font-size='58' font-family='Georgia,serif' fill='%23f4f1ea' text-anchor='middle'>ET</text></svg>" />
 </head>
 <body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
   <header class="nav" id="top">
     <a href="#top" class="nav__mark">Emre&nbsp;Tellioğlu</a>
     <nav class="nav__links" id="navLinks">
@@ -42,19 +44,30 @@
   <main>
     <!-- Hero -->
     <section class="hero">
-      <p class="eyebrow" data-i18n="hero_eyebrow">Sivas, Türkiye — Yazılım Geliştirici</p>
-      <h1 class="hero__headline" data-i18n="hero_headline">
-        Fikirleri, gerçekten işe yarayan ürünlere dönüştürüyorum.
-      </h1>
-      <p class="hero__intro" data-i18n="hero_intro">
-        Merhaba, ben Emre Tellioğlu. Bilişim Sistemleri ve Teknolojileri mezunu bir geliştiriciyim;
-        mobil uygulamalardan yapay zekâ modellerine kadar uçtan uca proje yürütüyorum. Benim için
-        önemli olan teknolojinin kendisi değil, çözdüğü gerçek problemdir.
-      </p>
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--solid" data-i18n="hero_cta_work">Çalışmalarımı gör</a>
-        <a href="#contact" class="btn btn--line" data-i18n="hero_cta_contact">İletişime geç</a>
+      <div class="hero__text">
+        <p class="status">
+          <span class="status__dot"></span>
+          <span data-i18n="hero_status">İş fırsatlarına açığım</span>
+        </p>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Sivas, Türkiye — Yazılım Geliştirici</p>
+        <h1 class="hero__headline" data-i18n="hero_headline">
+          Fikirleri, gerçekten işe yarayan ürünlere dönüştürüyorum.
+        </h1>
+        <p class="hero__intro" data-i18n="hero_intro">
+          Merhaba, ben Emre Tellioğlu. Bilişim Sistemleri ve Teknolojileri mezunu bir geliştiriciyim;
+          mobil uygulamalardan yapay zekâ modellerine kadar uçtan uca proje yürütüyorum. Benim için
+          önemli olan teknolojinin kendisi değil, çözdüğü gerçek problemdir.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--solid" data-i18n="hero_cta_work">Çalışmalarımı gör</a>
+          <a href="#contact" class="btn btn--line" data-i18n="hero_cta_contact">İletişime geç</a>
+        </div>
       </div>
+      <figure class="hero__photo">
+        <img src="assets/img/emre.jpg" alt="Emre Tellioğlu" id="avatarImg"
+             onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex';" />
+        <div class="avatar-fallback" id="avatarFallback">ET</div>
+      </figure>
       <dl class="facts">
         <div class="facts__item">
           <dt class="facts__num">2×</dt>
@@ -117,7 +130,7 @@
       <div class="skills">
         <div class="skills__col">
           <h3 class="skills__label" data-i18n="skills_lang">Diller</h3>
-          <p class="skills__list">Python · C# · Dart · SQL</p>
+          <p class="skills__list">Python · C# · Dart · SQL · JavaScript · HTML/CSS</p>
         </div>
         <div class="skills__col">
           <h3 class="skills__label" data-i18n="skills_fw">Framework &amp; Kütüphane</h3>
@@ -125,17 +138,17 @@
         </div>
         <div class="skills__col">
           <h3 class="skills__label" data-i18n="skills_db">Veritabanı &amp; Backend</h3>
-          <p class="skills__list">Firebase (Firestore, Auth) · PostgreSQL</p>
+          <p class="skills__list">Firebase (Firestore, Auth) · PostgreSQL · REST API</p>
         </div>
         <div class="skills__col">
           <h3 class="skills__label" data-i18n="skills_tools">Araçlar &amp; Yöntemler</h3>
-          <p class="skills__list">Git &amp; GitHub · REST API · OOP · Veri Ön İşleme</p>
+          <p class="skills__list">Git &amp; GitHub · VS Code · Android Studio · OOP · Veri Ön İşleme</p>
         </div>
         <div class="skills__col skills__col--wide">
           <h3 class="skills__label" data-i18n="skills_soft">Nitelikler</h3>
           <p class="skills__list" data-i18n="skills_soft_list">
-            Takım liderliği · Proje yönetimi · Problem çözme · Analitik düşünme ·
-            Sunum &amp; iletişim · Hızlı öğrenme · Çözüm odaklılık
+            Takım çalışması · Takım liderliği · Proje yönetimi · Problem çözme · Analitik düşünme ·
+            Sunum &amp; iletişim · Hızlı öğrenme · Uyum sağlama · Sorumluluk · Çözüm odaklılık
           </p>
         </div>
       </div>
@@ -149,39 +162,6 @@
       </div>
 
       <ol class="work">
-        <li class="work__item">
-          <div class="work__meta">
-            <span class="work__award" data-i18n="award_3rd">Türkiye 3.'lüğü</span>
-            <span class="work__year">2024</span>
-          </div>
-          <div class="work__body">
-            <h3 class="work__title" data-i18n="w1_title">Yapay Zekâ Destekli Mobil URL Güvenlik Uygulaması</h3>
-            <p class="work__role">TEKNOFEST 2024 TÜBİTAK · <span data-i18n="role_dev">Geliştirici</span></p>
-            <p class="work__desc" data-i18n="w1_desc">
-              Flutter ile arayüzü, Python ile sunucu tarafını geliştirdim. OCR ile metne çevrilen
-              URL'leri eğittiğimiz Random Forest modeliyle analiz ederek %98 doğruluk oranına ulaştık.
-            </p>
-            <p class="work__stack">Flutter · Python · OCR · Random Forest · Scikit-learn</p>
-          </div>
-        </li>
-
-        <li class="work__item">
-          <div class="work__meta">
-            <span class="work__award" data-i18n="award_2nd">Türkiye 2.'liği</span>
-            <span class="work__year">2023</span>
-          </div>
-          <div class="work__body">
-            <h3 class="work__title" data-i18n="w2_title">İngilizce Kelimelerimi Öğreniyorum</h3>
-            <p class="work__role">TEKNOFEST 2023 TÜBİTAK · <span data-i18n="role_cap">Takım Kaptanı</span></p>
-            <p class="work__desc" data-i18n="w2_desc">
-              Bilimsel "Aralıklı Tekrar" tekniğine dayanan bir mobil oyun tasarladık. Unity ve C# ile
-              kullanıcının öğrenme hızına adapte olan dinamik bir algoritma geliştirerek kalıcı öğrenme
-              deneyimi sunduk.
-            </p>
-            <p class="work__stack">Unity · C# · Oyunlaştırma · Aralıklı Tekrar</p>
-          </div>
-        </li>
-
         <li class="work__item">
           <div class="work__meta">
             <span class="work__award work__award--alt" data-i18n="award_finalist">Finalist</span>
@@ -212,6 +192,39 @@
               veri ön işleme, model eğitimi ve tahminleme süreçlerini tamamladık.
             </p>
             <p class="work__stack">Python · Scikit-learn · Pandas · Veri Analizi</p>
+          </div>
+        </li>
+
+        <li class="work__item">
+          <div class="work__meta">
+            <span class="work__award" data-i18n="award_3rd">Türkiye 3.'lüğü</span>
+            <span class="work__year">2024</span>
+          </div>
+          <div class="work__body">
+            <h3 class="work__title" data-i18n="w1_title">Yapay Zekâ Destekli Mobil URL Güvenlik Uygulaması</h3>
+            <p class="work__role">TEKNOFEST 2024 TÜBİTAK · <span data-i18n="role_dev">Geliştirici</span></p>
+            <p class="work__desc" data-i18n="w1_desc">
+              Flutter ile arayüzü, Python ile sunucu tarafını geliştirdim. OCR ile metne çevrilen
+              URL'leri eğittiğimiz Random Forest modeliyle analiz ederek %98 doğruluk oranına ulaştık.
+            </p>
+            <p class="work__stack">Flutter · Python · OCR · Random Forest · Scikit-learn</p>
+          </div>
+        </li>
+
+        <li class="work__item">
+          <div class="work__meta">
+            <span class="work__award" data-i18n="award_2nd">Türkiye 2.'liği</span>
+            <span class="work__year">2023</span>
+          </div>
+          <div class="work__body">
+            <h3 class="work__title" data-i18n="w2_title">İngilizce Kelimelerimi Öğreniyorum</h3>
+            <p class="work__role">TEKNOFEST 2023 TÜBİTAK · <span data-i18n="role_cap">Takım Kaptanı</span></p>
+            <p class="work__desc" data-i18n="w2_desc">
+              Bilimsel "Aralıklı Tekrar" tekniğine dayanan bir mobil oyun tasarladık. Unity ve C# ile
+              kullanıcının öğrenme hızına adapte olan dinamik bir algoritma geliştirerek kalıcı öğrenme
+              deneyimi sunduk.
+            </p>
+            <p class="work__stack">Unity · C# · Oyunlaştırma · Aralıklı Tekrar</p>
           </div>
         </li>
 
