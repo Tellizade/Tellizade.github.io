@@ -1,7 +1,7 @@
-// ----- Yıl -----
+// Yıl
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ----- Mobil menü -----
+// Mobil menü
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
@@ -9,162 +9,154 @@ navLinks.querySelectorAll("a").forEach((a) =>
   a.addEventListener("click", () => navLinks.classList.remove("open"))
 );
 
-// ----- Tema değiştirme -----
+// Tema
 const themeToggle = document.getElementById("themeToggle");
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") {
-  document.documentElement.setAttribute("data-theme", "light");
-  themeToggle.textContent = "☀️";
+if (localStorage.getItem("theme") === "dark") {
+  document.documentElement.setAttribute("data-theme", "dark");
 }
 themeToggle.addEventListener("click", () => {
-  const isLight = document.documentElement.getAttribute("data-theme") === "light";
-  if (isLight) {
+  const dark = document.documentElement.getAttribute("data-theme") === "dark";
+  if (dark) {
     document.documentElement.removeAttribute("data-theme");
-    themeToggle.textContent = "🌙";
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    themeToggle.textContent = "☀️";
     localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
   }
 });
 
-// ----- İngilizce çeviriler -----
+// İngilizce çeviriler
 const translations = {
   nav_about: "About",
   nav_skills: "Skills",
-  nav_projects: "Projects",
-  nav_achievements: "Achievements",
+  nav_work: "Work",
+  nav_path: "Experience",
   nav_contact: "Contact",
 
-  hero_greeting: "Hi, I'm",
-  hero_role_prefix: "Software Developer",
-  hero_role_accent: "· AI & Mobile",
-  hero_tagline:
-    "I know what it means to scribble an idea into a notebook late at night and turn it into a product that actually works months later. What matters is not the technology itself, but the real problem it solves.",
-  hero_cta_projects: "View My Work",
-  hero_cta_contact: "Get in Touch",
+  hero_eyebrow: "Sivas, Türkiye — Software Developer",
+  hero_headline: "I turn ideas into products that actually work.",
+  hero_intro:
+    "Hi, I'm Emre Tellioğlu — an Information Systems & Technologies graduate. I build projects end to end, from mobile apps to AI models. What matters to me is not the technology itself, but the real problem it solves.",
+  hero_cta_work: "View my work",
+  hero_cta_contact: "Get in touch",
+  fact_awards: "TEKNOFEST national awards",
+  fact_acc: "ML model accuracy",
+  fact_captain: "times team captain",
+  fact_projects: "completed projects",
 
-  stat_finals: "TEKNOFEST National Awards",
-  stat_projects: "Completed Projects",
-  stat_accuracy: "ML Model Accuracy",
-  stat_captain: "Times Team Captain",
-
-  about_title: "About Me",
+  about_title: "About",
   about_p1:
-    "I'm an Information Systems & Technologies graduate with hands-on, end-to-end software development experience and a project-based learning mindset. I've worked across mobile and web development, artificial intelligence and machine learning, data analysis and database management.",
+    "I've gained experience at every step of the software process, from the idea stage to launching the product. I've worked on mobile and web development, artificial intelligence and machine learning, data analysis and database management.",
   about_p2:
-    "From the idea stage to launching the product, I took active roles in design, development, testing and presentation. The team leadership, problem-solving and analytical thinking skills reinforced by my national rankings at TEKNOFEST turned into concrete results in accessibility, education, cybersecurity and agriculture technologies.",
-  about_p3:
-    "I'm a developer who is eager to learn new technologies quickly, works well in teams, and completes work meticulously.",
-  about_card_edu: "Education",
+    "The leadership, problem-solving and analytical thinking reinforced by my national rankings at TEKNOFEST turned into concrete solutions across accessibility, education, cybersecurity and agriculture technologies. I'm a developer who learns new technologies quickly, works well in teams, and finishes work with care.",
+  about_edu: "Education",
   about_edu_dept: "Information Systems & Technologies (BSc)",
-  about_edu_grad: "Expected Graduation",
-  about_card_lang: "Languages",
-  lang_tr: "Turkish — Native",
-  lang_en: "English — B1 (Intermediate)",
+  about_edu_grad: "Expected graduation",
+  about_lang: "Languages",
+  lang_tr: "Turkish",
+  lang_tr_lvl: "Native",
+  lang_en: "English",
 
-  skills_title: "Technical Skills",
-  skills_lang: "Programming Languages",
+  skills_title: "Skills & Qualities",
+  skills_lang: "Languages",
   skills_fw: "Frameworks & Libraries",
   skills_db: "Databases & Backend",
-  skills_focus: "Focus Areas",
-  focus_mobile: "Mobile Development",
-  focus_ai: "Artificial Intelligence / ML",
-  focus_data: "Data Analysis",
-  focus_web: "Web Development",
+  skills_tools: "Tools & Practices",
+  skills_soft: "Qualities",
+  skills_soft_list:
+    "Team leadership · Project management · Problem solving · Analytical thinking · Presentation & communication · Fast learning · Solution-oriented",
 
-  projects_title: "Projects & Achievements",
-  badge_third: "3rd in Türkiye",
-  badge_second: "2nd in Türkiye",
-  badge_finalist: "Finalist",
-  badge_finalist2: "Finalist",
-  badge_team: "Team Member",
+  work_title: "Selected Work",
+  award_3rd: "3rd in Türkiye",
+  award_2nd: "2nd in Türkiye",
+  award_finalist: "Finalist",
+  award_finalist2: "Finalist",
+  award_team: "Team Member",
   role_dev: "Developer",
-  role_captain: "Team Captain",
-  role_captain2: "Team Captain",
-  role_captain3: "Team Captain",
+  role_cap: "Team Captain",
+  role_cap2: "Team Captain",
+  role_cap3: "Team Captain",
 
-  proj1_title: "AI-Powered Mobile URL Security App",
-  proj1_desc:
-    "We built the UI with Flutter, a Python-based backend and a machine learning model. By analysing URLs extracted via OCR with a trained Random Forest model, we reached 98% accuracy.",
-  proj2_title: "Learning My English Words",
-  proj2_desc:
-    "We designed a mobile game based on the scientific 'Spaced Repetition' technique. Using Unity and C#, we developed a dynamic algorithm that adapts to the user's learning speed for lasting retention.",
-  proj3_title: "Barrier-Free Tomorrows Platform (Yades)",
-  proj3_desc:
-    "I managed the roadmap and task distribution and represented the team throughout TEKNOFEST. We designed a Firebase- and AI-based matching algorithm that automated the best caregiver–individual match based on user profiles.",
-  proj4_title: "AI-Based Agricultural Productivity Platform",
-  proj4_desc:
-    "I managed team coordination and the project timeline. Using Python, Scikit-learn and Pandas, we completed data preprocessing, model training and prediction processes.",
-  proj5_title: "Rhisos Rocket Team",
-  proj5_sub: "Design & Software Team Member",
-  proj5_desc:
+  w1_title: "AI-Powered Mobile URL Security Application",
+  w1_desc:
+    "I built the interface with Flutter and the backend with Python. By analysing OCR-extracted URLs with a trained Random Forest model, we reached 98% accuracy.",
+  w2_title: "Learning My English Words",
+  w2_desc:
+    "We designed a mobile game based on the scientific 'Spaced Repetition' technique. Using Unity and C#, we built a dynamic algorithm adapting to the user's learning speed for lasting retention.",
+  w3_title: "Barrier-Free Tomorrows Platform (Yades)",
+  w3_desc:
+    "I managed the roadmap and task distribution and represented the team. With a Firebase- and AI-based matching algorithm, we automated the best caregiver–individual match based on user profiles.",
+  w4_title: "AI-Based Agricultural Productivity Platform",
+  w4_desc:
+    "I managed team coordination and the project timeline. Using Python, Scikit-learn and Pandas, we completed data preprocessing, model training and prediction.",
+  w5_title: "Rhisos Rocket Team",
+  w5_role: "Design & Software Team Member",
+  w5_desc:
     "I contributed as part of the team to software development and hardware integration for the rocket's avionics systems.",
+  w5_stack: "Avionics · Software · Hardware Integration",
 
-  ach_title: "Leadership & Social Roles",
-  ach1_title: "Fair Operations & Coordination Officer",
-  ach1_desc:
-    "TEKNOFEST Istanbul — At the largest event in the festival's history, I tracked the event flow and resolved on-site problems.",
-  ach2_title: "President, Şarkışla Science, Art & Culture Club",
-  ach2_desc:
-    "I increased student participation by organising technology-focused seminars, workshops and social events.",
-  ach3_title: "Student Representative, School Board",
-  ach3_desc:
-    "I strengthened communication by conveying students' academic and administrative views to the board.",
-  ach4_title: "Member, Sivas Cumhuriyet University Student Senate",
-  ach4_desc:
-    "I contributed to decision-making processes regarding student rights and regulations across the university.",
+  more_title: "Academic & Coursework Projects",
+  more_intro:
+    "Alongside my competition projects, I built many course, term and final projects throughout my degree, applying different technologies hands-on.",
+  more1_title: "Mobile App Coursework",
+  more1_desc: "Course and term projects built with Flutter & Dart.",
+  more2_title: "Database & Backend Projects",
+  more2_desc: "Data modelling and application projects with PostgreSQL and SQL.",
+  more3_title: "Machine Learning Studies",
+  more3_desc: "Data analysis and model experiments with Python, Scikit-learn and Pandas.",
+
+  path_title: "Experience & Roles",
+  p1_title: "Fair Operations & Coordination Officer",
+  p1_desc: "Tracked the event flow and resolved on-site problems at the largest event in the festival's history.",
+  p2_title: "President — Şarkışla Science, Art & Culture Club",
+  p2_desc: "Increased student participation by organising technology seminars, workshops and social events.",
+  p3_title: "Student Representative — School Board",
+  p3_desc: "Strengthened communication by conveying students' academic and administrative views to the board.",
+  p4_title: "Member — Sivas Cumhuriyet University Student Senate",
+  p4_desc: "Contributed to decision-making processes on student rights and regulations.",
 
   contact_title: "Contact",
   contact_lead:
-    "I'm open to new opportunities and collaborations. Feel free to reach out about a project or a position.",
-  footer_built: "Designed & coded by Emre Tellioğlu.",
+    "I'm open to new opportunities and collaborations. Feel free to reach out about a position or a project.",
+  contact_email: "Email",
+  contact_phone: "Phone",
 };
 
-// Türkçe orijinal metinleri sakla
 const original = {};
 document.querySelectorAll("[data-i18n]").forEach((el) => {
   original[el.getAttribute("data-i18n")] = el.innerHTML;
 });
 
 const langToggle = document.getElementById("langToggle");
-let currentLang = localStorage.getItem("lang") || "tr";
+let lang = localStorage.getItem("lang") || "tr";
 
-function applyLang(lang) {
+function applyLang(next) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (lang === "en" && translations[key]) {
-      el.innerHTML = translations[key];
-    } else {
-      el.innerHTML = original[key];
-    }
+    if (next === "en" && translations[key]) el.innerHTML = translations[key];
+    else el.innerHTML = original[key];
   });
-  document.documentElement.lang = lang;
-  langToggle.textContent = lang === "en" ? "TR" : "EN";
-  localStorage.setItem("lang", lang);
-  currentLang = lang;
+  document.documentElement.lang = next;
+  langToggle.textContent = next === "en" ? "TR" : "EN";
+  localStorage.setItem("lang", next);
+  lang = next;
 }
 
-langToggle.addEventListener("click", () => {
-  applyLang(currentLang === "en" ? "tr" : "en");
-});
+langToggle.addEventListener("click", () => applyLang(lang === "en" ? "tr" : "en"));
+if (lang === "en") applyLang("en");
 
-if (currentLang === "en") applyLang("en");
-
-// ----- Kaydırmada beliren animasyon -----
-const revealEls = document.querySelectorAll(".section, .stat, .project");
-revealEls.forEach((el) => el.classList.add("reveal"));
-
-const observer = new IntersectionObserver(
+// Kaydırmada beliren animasyon
+const items = document.querySelectorAll(".block, .work__item, .mini, .path__item");
+items.forEach((el) => el.classList.add("reveal"));
+const io = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        io.unobserve(e.target);
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.1 }
 );
-revealEls.forEach((el) => observer.observe(el));
+items.forEach((el) => io.observe(el));
