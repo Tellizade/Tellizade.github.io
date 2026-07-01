@@ -2,7 +2,7 @@
 **Software Developer · AI & Mobile**
 
 Sivas, Türkiye · +90 536 479 3160 · tellioglux@gmail.com
-LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Tellizade
+LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Emre-Tellioglu
 
 ---
 

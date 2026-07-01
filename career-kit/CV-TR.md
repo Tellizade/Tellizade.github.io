@@ -2,7 +2,7 @@
 **Yazılım Geliştirici · Yapay Zekâ & Mobil**
 
 Sivas, Türkiye · 0536 479 3160 · tellioglux@gmail.com
-LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Tellizade
+LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Emre-Tellioglu
 
 ---
 

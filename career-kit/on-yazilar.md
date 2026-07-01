@@ -127,7 +127,7 @@ Merhaba,
 Flutter, Python ve yapay zekâ/makine öğrenmesi alanlarında proje deneyimim var. TEKNOFEST'te Türkiye
 2.'liği ve 3.'lüğü ile iki finalistlik elde ettim ve birden çok projede takım kaptanlığı yaptım.
 
-CV'mi ekte bulabilirsiniz. Portfolyo ve projelerim: [web sitesi linki] · GitHub: github.com/Tellizade
+CV'mi ekte bulabilirsiniz. Portfolyo ve projelerim: [web sitesi linki] · GitHub: github.com/Emre-Tellioglu
 
 Görüşme fırsatı bulabilirsek çok sevinirim. İlginiz için şimdiden teşekkür ederim.
 
