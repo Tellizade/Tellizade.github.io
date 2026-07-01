@@ -6,7 +6,7 @@ Bu depo, kişisel portfolyo web sitemi ve iş başvurularında kullandığım ka
 
 `index.html` + `assets/` → modern, çift dilli (TR/EN), responsive kişisel portfolyo.
 
-- **Canlı (GitHub Pages):** https://tellizade.github.io/
+- **Canlı (GitHub Pages):** https://emre-tellioglu.github.io/
 - **Yerel önizleme:** `python3 -m http.server 8000` → http://localhost:8000
 
 ## 📁 Kariyer Kiti
@@ -23,4 +23,4 @@ Bu depo, kişisel portfolyo web sitemi ve iş başvurularında kullandığım ka
 
 - E-posta: tellioglux@gmail.com
 - LinkedIn: [emre-tellioğlu](https://www.linkedin.com/in/emre-tellio%C4%9Flu-538312259/)
-- GitHub: [Tellizade](https://github.com/Tellizade)
+- GitHub: [Emre-Tellioglu](https://github.com/Emre-Tellioglu)

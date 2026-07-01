@@ -20,12 +20,12 @@ karşılaman için hazırlandı. Her dosya tek başına kullanıma hazırdır.
 
 Kök dizindeki `index.html`, `assets/` ile birlikte hazır bir web sitesidir. Yayınlamak için:
 
-1. GitHub'da depona git: **`Tellizade/Tellizade.github.io`**
+1. GitHub'da depona git: **`Emre-Tellioglu/Emre-Tellioglu.github.io`**
 2. Üstten **Settings → Pages** sekmesine gir.
 3. **Source** kısmında **Deploy from a branch** seç.
 4. **Branch**: `main`, **Folder**: `/ (root)` seç ve **Save** de.
 5. Birkaç dakika sonra siten şu temiz adreste yayında olur:
-   **`https://tellizade.github.io/`**
+   **`https://emre-tellioglu.github.io/`**
 
 > İpucu: İleride kendi alan adını (ör. `emretellioglu.com`) de bu repoya bağlayabilirsin.
 
@@ -48,7 +48,7 @@ python3 -m http.server 8000
 
 `github-profile-README.md` dosyasını aç, içindeki yönergeyi izle:
 
-1. `github.com/new` → repo adı **kullanıcı adınla birebir aynı**: `Tellizade`
+1. `github.com/new` → repo adı **kullanıcı adınla birebir aynı**: `Emre-Tellioglu`
 2. "Add a README file" işaretle, **Public** yap, oluştur.
 3. Dosyadaki (yorumdan sonraki) içeriği o README'ye yapıştır, kaydet.
 4. Artık profilini açan herkes seni profesyonel bir özetle karşılar.
@@ -85,8 +85,8 @@ Her başvuruda: **CV + uygun ön yazı (`on-yazilar.md`) + portfolyo linki + Git
 ## Hızlı bağlantılar (her yere yapıştırabilirsin)
 
 ```
-Portfolyo : https://tellizade.github.io/
-GitHub    : https://github.com/Tellizade
+Portfolyo : https://emre-tellioglu.github.io/
+GitHub    : https://github.com/Emre-Tellioglu
 LinkedIn  : https://www.linkedin.com/in/emre-tellio%C4%9Flu-538312259/
 E-posta   : tellioglux@gmail.com
 Telefon   : 0536 479 3160
