@@ -49,7 +49,7 @@ const translations = {
     "The leadership, problem-solving and analytical thinking reinforced by my national rankings at TEKNOFEST turned into concrete solutions across accessibility, education, cybersecurity, agriculture and mining technologies. I'm a developer who learns new technologies quickly, works well in teams, and finishes work with care.",
   about_edu: "Education",
   about_edu_dept: "Information Systems & Technologies (BSc)",
-  about_edu_grad: "Graduated",
+  about_edu_grad: "Graduation: June 2026",
   about_gpa: "GPA",
   about_lang: "Languages",
   lang_tr: "Turkish",

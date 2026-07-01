@@ -2,7 +2,7 @@
 **Yazılım Geliştirici · Yapay Zekâ & Mobil**
 
 Sivas, Türkiye · 0536 479 3160 · tellioglux@gmail.com
-LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Tellizade
+LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Emre-Tellioglu
 
 ---
 
@@ -29,8 +29,8 @@ titizlikle tamamlayan bir geliştiriciyim.
 ## EĞİTİM
 
 **Sivas Cumhuriyet Üniversitesi** — Şarkışla Uygulamalı Bilimler Yüksekokulu
-Bilişim Sistemleri ve Teknolojileri (Lisans)
-*Beklenen Mezuniyet: 2026*
+Bilişim Sistemleri ve Teknolojileri (Lisans) · Not Ort. 3.34/4.00
+*Mezuniyet: Haziran 2026*
 
 ---
 

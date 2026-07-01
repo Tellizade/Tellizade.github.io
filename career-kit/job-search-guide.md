@@ -32,8 +32,8 @@ mutlaka ekle. Aksi halde 3-5 yıl deneyim isteyen ilanlar çıkar.
 
 - ✅ CV (PDF) — `CV-TR.md` / `CV-EN.md`'den üret
 - ✅ Ön yazı — `on-yazilar.md`'den pozisyona uygun olanı seç
-- ✅ Portfolyo linki — `https://tellizade.github.io/`
-- ✅ GitHub linki — `https://github.com/Tellizade`
+- ✅ Portfolyo linki — `https://emre-tellioglu.github.io/`
+- ✅ GitHub linki — `https://github.com/Emre-Tellioglu`
 - ✅ LinkedIn linki
 
 ## 5. LinkedIn profili için hızlı kontrol listesi

@@ -1,13 +1,13 @@
 <!--
   KULLANIM: Bu dosyanın içeriği, GitHub PROFİL README'in için hazırlanmıştır.
-  GitHub'da kullanıcı adınla AYNI isimde bir repo açtığında (Tellizade/Tellizade),
+  GitHub'da kullanıcı adınla AYNI isimde bir repo açtığında (Emre-Tellioglu/Emre-Tellioglu),
   o reponun README.md dosyası doğrudan profil sayfanın üstünde görünür.
 
   Adımlar:
-  1. github.com/new -> Repository name: Tellizade (kullanıcı adınla birebir aynı)
+  1. github.com/new -> Repository name: Emre-Tellioglu (kullanıcı adınla birebir aynı)
   2. "Add a README file" kutusunu işaretle, repoyu Public yap, oluştur.
   3. Aşağıdaki (bu yorumdan sonraki) içeriği o README.md'ye yapıştır.
-  4. İstatistik kartlarındaki "Tellizade" yazan yerleri değiştirmene gerek yok, kullanıcı adın bu.
+  4. İstatistik kartlarındaki "Emre-Tellioglu" yazan yerleri değiştirmene gerek yok, kullanıcı adın bu.
 -->
 
 <h1 align="center">Merhaba, ben Emre 👋</h1>
@@ -69,12 +69,12 @@
 ### 📊 GitHub İstatistiklerim
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Tellizade&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub İstatistikleri"/>
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tellizade&layout=compact&theme=tokyonight&hide_border=true" alt="En Çok Kullandığım Diller"/>
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Emre-Tellioglu&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub İstatistikleri"/>
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Emre-Tellioglu&layout=compact&theme=tokyonight&hide_border=true" alt="En Çok Kullandığım Diller"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Tellizade&theme=tokyonight&hide_border=true" alt="Katkı Serisi"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Emre-Tellioglu&theme=tokyonight&hide_border=true" alt="Katkı Serisi"/>
 </p>
 
 ---

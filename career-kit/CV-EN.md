@@ -2,7 +2,7 @@
 **Software Developer · AI & Mobile**
 
 Sivas, Türkiye · +90 536 479 3160 · tellioglux@gmail.com
-LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Tellizade
+LinkedIn: linkedin.com/in/emre-tellioğlu-538312259 · GitHub: github.com/Emre-Tellioglu
 
 ---
 
@@ -28,8 +28,8 @@ quickly, collaborative, and detail-oriented.
 ## EDUCATION
 
 **Sivas Cumhuriyet University** — Şarkışla School of Applied Sciences
-B.Sc. in Information Systems & Technologies
-*Expected graduation: 2026*
+B.Sc. in Information Systems & Technologies · GPA 3.34/4.00
+*Graduation: June 2026*
 
 ---
 
